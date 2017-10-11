@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14E26a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,39 +18,45 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="config" translatesAutoresizingMaskIntoConstraints="NO" id="JQ0-eV-olp">
-                                <rect key="frame" x="193" y="148" width="215" height="215"/>
+                                <rect key="frame" x="80" y="140" width="215" height="215"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用云子配置工具扫描上面二维码，或者把图像保存后，再用配置工具读取。以便把云子配置为试验用Beacon。" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nx-Yg-Ba3">
-                                <rect key="frame" x="180" y="422" width="240" height="82"/>
+                                <rect key="frame" x="67.5" y="414" width="240" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="7Av-x7-1CQ"/>
                                     <constraint firstAttribute="height" constant="82" id="KD0-qC-J1v"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLY-nf-MML">
-                                <rect key="frame" x="240" y="533" width="120" height="30"/>
+                                <rect key="frame" x="126" y="525" width="123" height="30"/>
                                 <state key="normal" title="保存二维码到相册">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveToAlbum:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IO2-ai-9DZ"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="WLY-nf-MML" secondAttribute="centerX" id="7kG-57-uL1"/>
                             <constraint firstItem="WLY-nf-MML" firstAttribute="top" secondItem="7nx-Yg-Ba3" secondAttribute="bottom" constant="29" id="Cad-re-cb3"/>
                             <constraint firstAttribute="centerX" secondItem="JQ0-eV-olp" secondAttribute="centerX" id="WnK-oy-x1y"/>
                             <constraint firstItem="7nx-Yg-Ba3" firstAttribute="top" secondItem="JQ0-eV-olp" secondAttribute="bottom" constant="59" id="bpT-bQ-b09"/>
                             <constraint firstAttribute="centerX" secondItem="7nx-Yg-Ba3" secondAttribute="centerX" id="oLU-Bl-5iN"/>
-                            <constraint firstItem="JQ0-eV-olp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="128" id="sZg-ye-jmW"/>
+                            <constraint firstItem="JQ0-eV-olp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="sZg-ye-jmW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="JQ0-eV-olp" id="Zd7-xn-aNs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

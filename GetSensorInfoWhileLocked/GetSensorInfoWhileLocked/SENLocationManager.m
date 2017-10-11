@@ -48,7 +48,7 @@
         _monitorRegion = [SBKBeaconID beaconIDWithProximityUUID:[[NSUUID alloc]initWithUUIDString:@"3C6F9CF2-BBA6-4449-A79A-47DA2FF66D13"]
                                                           major:0x2711
                                                           minor:0x48B7];
-        [_locationManager addBroadcastKey:@"01Y2GLh1yw3+6Aq0RsnOQ8xNvXTnDUTTLE937Yedd/DnlcV0ixCWo7JQ+VEWRSya80yea6u5aWgnW1ACjKNzFnig=="];
+//        [_locationManager addBroadcastKey:@"01Y2GLh1yw3+6Aq0RsnOQ8xNvXTnDUTTLE937Yedd/DnlcV0ixCWo7JQ+VEWRSya80yea6u5aWgnW1ACjKNzFnig=="];
     }
     return self;
 }
